@@ -28,8 +28,23 @@ function fib(n, computed = {0: 0, 1: 1}) {
     computed[n] = fib(n-1, computed) + fib(n-2, computed);
   }
   return computed[n];
-}
+};
 
-function display() {
-  document.querySelector("p").innerText = fib(document.querySelector("input").value);
-}
+const inputBox = document.getElementById('input1');
+
+inputBox.onkeyup = function() {
+  // Get the value of the input box
+  const num = parseInt(inputBox.value);
+
+  // Check if the value is not a number
+  if (Object.is(num, NaN)) {
+    console.log('Not a number');
+    return false; // Stop the function or else it will continue!
+  }
+
+  // Result of fib with user choice
+  const answer = fib(num);
+
+  // Update the HTML
+  document.getElementById('result1').innerHTML = answer;
+};
