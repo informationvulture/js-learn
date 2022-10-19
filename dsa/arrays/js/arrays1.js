@@ -1,6 +1,6 @@
 // This is an array
 const arr1 = [1, 2, 3, 4, 5];
-document.getElementById('list').innerHTML = arr1;
+document.getElementById("list").innerHTML = arr1;
 
 /**
  * @description This function adds an element to the end of an array.
@@ -10,8 +10,8 @@ function doPush() {
 
   const value = arr1[arr1.length-1] + 1;
   arr1.push(value);
-  document.getElementById('list').innerHTML = arr1;
-  document.getElementById('status').innerHTML = `Done push: ${value}`;
+  document.getElementById("list").innerHTML = arr1;
+  document.getElementById("status").innerHTML = `Done push: ${value}`;
 }
 
 /**
@@ -22,8 +22,8 @@ function doUnshift() {
 
   const value = arr1[0] - 1;
   arr1.unshift(value);
-  document.getElementById('list').innerHTML = arr1;
-  document.getElementById('status').innerHTML = `Done unshift: ${value}`;
+  document.getElementById("list").innerHTML = arr1;
+  document.getElementById("status").innerHTML = `Done unshift: ${value}`;
 }
 
 /**
@@ -34,8 +34,8 @@ function doPop() {
   // and returns it.
 
   val = arr1.pop();
-  document.getElementById('list').innerHTML = arr1;
-  document.getElementById('status').innerHTML = `Done pop: ${val}`;
+  document.getElementById("list").innerHTML = arr1;
+  document.getElementById("status").innerHTML = `Done pop: ${val}`;
 }
 
 /**
@@ -46,18 +46,18 @@ function doShift() {
   // and returns it.
 
   const val = arr1.shift();
-  document.getElementById('list').innerHTML = arr1;
-  document.getElementById('status').innerHTML = `Done shift: ${val}`;
+  document.getElementById("list").innerHTML = arr1;
+  document.getElementById("status").innerHTML = `Done shift: ${val}`;
 }
 
-const el = document.getElementById('pop');
-el.addEventListener('click', doPop, false);
+const el = document.getElementById("pop");
+el.addEventListener("click", doPop, false);
 
-const el2 = document.getElementById('shift');
-el2.addEventListener('click', doShift, false);
+const el2 = document.getElementById("shift");
+el2.addEventListener("click", doShift, false);
 
-const el3 = document.getElementById('push');
-el3.addEventListener('click', doPush, false);
+const el3 = document.getElementById("push");
+el3.addEventListener("click", doPush, false);
 
-const el4 = document.getElementById('unshift');
-el4.addEventListener('click', doUnshift, false);
+const el4 = document.getElementById("unshift");
+el4.addEventListener("click", doUnshift, false);

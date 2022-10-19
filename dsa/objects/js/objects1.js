@@ -1,18 +1,18 @@
 // This is a new object
 const degrees = {};
 
-degrees['BSc'] = 'Bachelor of Science';
-degrees['BA'] = 'Bachelor of Arts';
-degrees['MSc'] = 'Master of Science';
-degrees['MA'] = 'Master of Arts';
-degrees['PhD'] = 'Doctor of Philosophy';
-degrees['PhP'] = null;
+degrees["BSc"] = "Bachelor of Science";
+degrees["BA"] = "Bachelor of Arts";
+degrees["MSc"] = "Master of Science";
+degrees["MA"] = "Master of Arts";
+degrees["PhD"] = "Doctor of Philosophy";
+degrees["PhP"] = null;
 
-console.log(degrees['PhP']);
+console.log(degrees["PhP"]);
 
-degrees['PhP'] = 'Doctor of PhP';
+degrees["PhP"] = "Doctor of PhP";
 
-console.log(degrees['PhP']);
+console.log(degrees["PhP"]);
 
 
 // You can do fibonacci using an object
@@ -30,7 +30,7 @@ function fib(n, computed = {0: 0, 1: 1}) {
   return computed[n];
 };
 
-const inputBox = document.getElementById('input1');
+const inputBox = document.getElementById("input1");
 
 inputBox.onkeyup = function() {
   // Get the value of the input box
@@ -38,7 +38,7 @@ inputBox.onkeyup = function() {
 
   // Check if the value is not a number
   if (Object.is(num, NaN)) {
-    console.log('Not a number');
+    console.log("Not a number");
     return false; // Stop the function or else it will continue!
   }
 
@@ -46,5 +46,5 @@ inputBox.onkeyup = function() {
   const answer = fib(num);
 
   // Update the HTML
-  document.getElementById('result1').innerHTML = answer;
+  document.getElementById("result1").innerHTML = answer;
 };
