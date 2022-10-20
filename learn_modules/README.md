@@ -4,7 +4,7 @@
 Designed to read line by line from a given text file, and return the total times a word was found fitting the regex.
 
 ### Problems
-Getting the code to work with a specific number of entries and then stop was a challnge.
+Getting the code to work with a specific number of entries and then stop was a challenge.
 
 *How I solved it*:
     
@@ -15,15 +15,18 @@ Getting the code to work with a specific number of entries and then stop was a c
     ```js
     .on("close", () => {...});
     ```
+    **This is they key step that I was missing!**
+    The code would not stop running even when it finished running the code
+    in `rl.close()`.
     Inside here, I run whatever code I need, ensuring I end with:
     ```js
     process.exit(0);
     ```
 
-This code apperently also works if you do:
-```js
-rl.on("close", () => {...});
-```
+    This code apparently also works if you do:
+    ```js
+    rl.on("close", () => {...});
+    ```
 
 
 
