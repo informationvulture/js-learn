@@ -28,5 +28,21 @@ Getting the code to work with a specific number of entries and then stop was a c
     rl.on("close", () => {...});
     ```
 
+*Questions*:
+What is the difference between using:
+
+```js
+process.exit(0)
+```
+
+and
 
 
+```js
+rl.removeAllListeners;
+rl.removeListener("line", () => {});
+```
+
+Currently, it looks like no code will run after `process.exit(0)`. However, it looks like using `removeAllListeners` or `removeListener` stops the stream and allows code to still be executed.
+
+Update: After testing it again, it looks like it properly closes without anything other than the `rl.close` stuff. Further learning needed.

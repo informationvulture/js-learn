@@ -12,15 +12,15 @@ rl.on("line", (line) => {
     if (/^dog./.test(line)) {
         totals.push(line);
     }
-    if (totals.length == 5) {
+    if (totals.length == 55) {
         // Send the signal to end. Code won't run
         // after this line.
         rl.close();
     }
 }).on("close", () => {
-    console.log(`Found ${totals.length} words`);
+    console.log(`Found ${totals.length} words.`);
 
     console.log(`File processed: ${totals} matches found.`);
 
-    process.exit(0);
+    rl.removeAllListeners();
 });
