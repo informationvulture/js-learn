@@ -7,6 +7,6 @@ import { bookVault } from "./books.js";
 
 for (let i = 0; i < bookVault.length; i++) {
     for (let book in bookVault[i]) {
-        console.log(bookVault[i][book]);
+        console.log(`${book}=${bookVault[i][book]}`);
     }
 }
