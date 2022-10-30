@@ -5,8 +5,12 @@ import { bookVault } from "./books.js";
 
 // See data
 
-for (let i = 0; i < bookVault.length; i++) {
-    for (let book in bookVault[i]) {
-        console.log(`${book}=${bookVault[i][book]}`);
+console.log(`You currently have ${bookVault.length} book(s) in your vault.`);
+
+for (let i=0; i < bookVault.length; i++) {
+    console.log(`Book number ${i+1}`)
+    for (let key in bookVault[i]) {
+        console.log(`\t${key}: ${bookVault[i][key]}`);
     }
+    console.log("\n")
 }
