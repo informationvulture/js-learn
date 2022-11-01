@@ -5,6 +5,8 @@ import { bookVault } from "./books.js";
 
 // See data
 
+document.getElementById("book_count").innerHTML = bookVault.length;
+
 console.log(`You currently have ${bookVault.length} book(s) in your vault.`);
 
 for (let i=0; i < bookVault.length; i++) {
